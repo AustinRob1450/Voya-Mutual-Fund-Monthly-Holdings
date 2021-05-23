@@ -14,9 +14,9 @@ import openpyxl
 
 
 # ExcelLocation = input("Enter a file path you would like to store the excel files: ")
-ExcelLocation = r'/Users/austinroberts/Documents/Computer Science/VoyaDataScrapper/ExcelFiles/'
+ExcelLocation = r''
 
-# ExcelLocation = "/Users/austinroberts/Documents/Computer Science/VoyaDataScrapper/ExcelFiles/"  ## Make sure there is a slash at the end.
+# ExcelLocation = ""  ## Make sure there is a slash '/' at the end.
 MasterFile = ExcelLocation + "Master_file.xls"
 
 # As of May 22nd 2021 they changed their link but the current still works. May need updating soon.
@@ -38,6 +38,7 @@ urls = [
     'https://advisors.voya.com/document/holdings/voya-us-high-dividend-low-volatility-fund-monthly-holdings-xls.xls'
 ]
 
+# Verifying that the http return code is successful, return code 200 is ideal.
 #################################################
 def url_ok(*url):
     for i in range(0, len(url)):
@@ -48,6 +49,7 @@ def url_ok(*url):
 
     return (url_Obj.status_code == 200)
 
+# Collects each file off Voya's webpage
 ################################################
 def Collector(*url):
 
@@ -65,9 +67,9 @@ def Collector(*url):
 
                 print("Downloading... " + pathArray[3])
                 # nice
-                newPath = ExcelLocation + pathArray[3]
+                newPath = ExcelLocation + pathArray[3]  # Appending the file name at the end of the path given above.
 
-                urllib.request.urlretrieve(url[i], newPath)
+                urllib.request.urlretrieve(url[i], newPath) # These urllib methods allow us to collect the object (file) off the webpage. Requires a filename & place to drop it.
 
                 # Leave these as empty strings for the next iteration
                 newPath = ""
