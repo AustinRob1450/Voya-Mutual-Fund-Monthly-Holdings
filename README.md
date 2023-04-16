@@ -9,9 +9,7 @@ Instructions are as follows:
 3. Line 17, enter in a folder path that you established where you want to store the files you download. 
    Syntax for folder paths are as follows: r'Example/folder/for/storage/'
 3. Rename the Master File if you so please
-4. Linux: install python3 and run the appropriate commands from the command line
-5. Windows: Idek man
-6. MacOS: Dido linux
+
 
 The associated program files are a mixture of my own and some other public works.
 Feel free to contribute, offer suggestions, and use at free will. 
