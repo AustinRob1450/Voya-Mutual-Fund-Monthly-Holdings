@@ -9,6 +9,16 @@ Instructions are as follows:
 3. Line 17, enter in a folder path that you established where you want to store the files you download. 
    Syntax for folder paths are as follows: r'Example/folder/for/storage/'
 3. Rename the Master File if you so please
+4. Linux: install python3 and run the appropriate commands from the command line
+5. Windows: Idek man
+6. MacOS: Dido linux
+
+HTTP Request Responses:
+- 1xx informational response – the request was received, continuing process
+- 2xx successful – the request was successfully received, understood, and accepted
+- 3xx redirection – further action needs to be taken in order to complete the request
+- 4xx client error – the request contains bad syntax or cannot be fulfilled
+- 5xx server error – the server failed to fulfil an apparently valid request"
 
 
 The associated program files are a mixture of my own and some other public works.
