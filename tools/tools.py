@@ -48,7 +48,7 @@ class Tools:
 
         today = datetime.date.today()
 
-         # Format the date as DD/MM/YY
+        # Format the date as DD/MM/YY
         date_str = str(today)
 
         # Create the folder path
@@ -65,7 +65,7 @@ class Tools:
         self.master_path = os.path.join("Historicals", date_str, "master")    
         if not os.path.exists(self.master_path):
             os.makedirs(self.master_path)
-         
+
         return self.data_path
 
 
@@ -136,7 +136,7 @@ class Tools:
         
         os.chdir(self.master_path)
         try:
-            master_file.to_excel("Master.xlsx", index=False)
+            master_file.to_excel(f"Master_{self.date}.xlsx", index=False)
 
             print("Master file saved successfully")
         except Exception as e:
@@ -151,7 +151,7 @@ class Tools:
             pandas.DataFrame: Filtered DataFrame with rows removed
         """
         
-        df = pd.read_excel("Master.xlsx")
+        df = pd.read_excel(f"Master_{self.date}.xlsx")
         
         # Function to check if a cell value starts with the keyword
         def starts_with_keyword(cell_value):
@@ -165,7 +165,7 @@ class Tools:
         df_filtered = df_filtered.dropna(how='all')
         
         # Write the filtered DataFrame back to an Excel file
-        df_filtered.to_excel("output_file.xlsx", index=False)
+        df_filtered.to_excel(f"output_file_{self.date}.xlsx", index=False)
 
 
 
