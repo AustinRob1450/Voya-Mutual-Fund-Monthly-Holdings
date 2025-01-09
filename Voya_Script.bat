@@ -1,0 +1,1 @@
+pythonw.exe "python3 -m {Enter your file path to the DataScraper script here}"
